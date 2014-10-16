@@ -17,6 +17,16 @@ body {
 	width: 75%;
 	margin-right: 0px;
 	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+.current a:active a:hover{
+	color: #444;
+}
+
+.current a:link {
+	color: #ccc;
 }
 
 .sprites {
