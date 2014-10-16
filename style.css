@@ -21,7 +21,11 @@ body {
 	text-transform: uppercase;
 }
 
-.navigation a:active a:hover{
+.navigation a:active {
+	color: #444;
+}
+
+.navigation a:hover{
 	color: #444;
 }
 
