@@ -21,15 +21,15 @@ body {
 	text-transform: uppercase;
 }
 
-.navigation a:active {
+a:active {
 	color: #444;
 }
 
-.navigation a:hover{
+a:hover{
 	color: #444;
 }
 
-.navigation a:link {
+a:link {
 	color: #ccc;
 	text-decoration: none;
 }
