@@ -25,8 +25,12 @@ body {
 	display: inline-block;
 }
 
-.sprites a{
+.sprites a {
 	float: right;
+}
+
+.sprites img {
+	padding: 5px 5px 5px 5px;
 }
 
 .content {
