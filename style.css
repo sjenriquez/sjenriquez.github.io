@@ -74,7 +74,8 @@ body {
 }
 
 #twitter {
-
+	height: 32px;
+	width: 32px;
 }
 
 #linkedin {
