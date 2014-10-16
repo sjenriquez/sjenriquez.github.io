@@ -1,0 +1,46 @@
+body {
+	margin: 0 0 0 0;
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.header {
+	width: 75%;
+	margin-top: 15px;
+}
+
+.navigation {
+	width: 75%;
+	right: 0px;
+}
+
+.sprites {
+	width: 25%;
+	left: 0px;
+}
+
+.content {
+	width: 75%;
+	margin: 20px auto;
+}
+
+.content h1{
+	font-size: 22px;
+}
+
+.footer {
+	width: 75%;
+	margin: 20px auto;
+}
+
+.footer_left {
+	width: 45%;
+	left: 0px;
+}
+
+.footer_right {
+	width: 45%;
+	right: 0px;
+}
