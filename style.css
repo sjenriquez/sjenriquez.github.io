@@ -21,12 +21,13 @@ body {
 	text-transform: uppercase;
 }
 
-.current a:active a:hover{
+.navigation a:active a:hover{
 	color: #444;
 }
 
-.current a:link {
+.navigation a:link {
 	color: #ccc;
+	text-decoration: none;
 }
 
 .sprites {
