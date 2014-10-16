@@ -25,15 +25,15 @@ body {
 	color: #444;
 }
 
-.navigation :active {
+.navigation a:active {
 	color: #444;
 }
 
-.navigation :hover {
+.navigation a:hover {
 	color: #444;
 }
 
-.navigation a:link {
+.navigation a {
 	color: #ccc;
 	text-decoration: none;
 }
