@@ -55,7 +55,23 @@ body {
 }
 
 .sprites img {
-	padding: 5px 5px 5px 5px;
+	padding: 5px 5px 0px 5px;
+}
+
+#github {
+	background-image: url('https://sjenriquez.github.io/img/GitHub-Mark-Light-32px.png');
+}
+
+#github :hover {
+	background-image: url('https://sjenriquez.github.io/img/GitHub-Mark-32px.png');
+}
+
+#twitter {
+
+}
+
+#linkedin {
+
 }
 
 .content {
