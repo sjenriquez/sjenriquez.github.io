@@ -4,13 +4,18 @@ body {
 
 .wrapper {
 	width: 100%;
+	background-color: #CCC469;
+}
+
+.headerwrap {
+	margin-top: 15px;
+	background-color: #5798AA;
 }
 
 .header {
-	margin-top: 15px;
+	width: 75%;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: #444;
 }
 
 .navigation {
