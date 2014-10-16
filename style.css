@@ -11,6 +11,7 @@ body {
 	margin-top: 15px;
 	margin-right: auto;
 	margin-left: auto;
+	background-color: #444;
 }
 
 .navigation {
@@ -19,7 +20,6 @@ body {
 	display: inline-block;
 	font-family: Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
-	background-color: #444
 }
 
 #current {
