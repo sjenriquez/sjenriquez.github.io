@@ -46,6 +46,7 @@ body {
 .content img {
 	margin-right: auto;
 	margin-left: auto;
+	display: block;
 }
 
 .footer {
