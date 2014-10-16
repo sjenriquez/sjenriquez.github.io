@@ -59,11 +59,14 @@ body {
 }
 
 #github {
-	
+	height: 32px;
+	width: 32px;
 }
 
 #github :hover {
 	background-image: url('https://sjenriquez.github.io/img/GitHub-Mark-32px.png');
+	height: 32px;
+	width: 32px;
 }
 
 #twitter {
