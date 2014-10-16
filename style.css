@@ -9,20 +9,17 @@ body {
 .header {
 	width: 75%;
 	margin-top: 15px;
-	display: block;
 	position: fixed;
 }
 
 .navigation {
 	width: 75%;
 	right: 0px;
-	display: inline-block;
 }
 
 .sprites {
-	width: 25%;
+	width: 24%;
 	left: 0px;
-	display: inline-block;
 }
 
 .content {
@@ -46,7 +43,7 @@ body {
 }
 
 .footer_right {
-	width: 45%;
+	width: 54%;
 	right: 0px;
 	display: inline-block;
 	text-align: right;
