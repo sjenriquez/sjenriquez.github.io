@@ -127,8 +127,9 @@ body {
 
 .blog_main h1 {
 	font-size: 2em;
-	margin:10px 0px 10px 10px;
+	margin:10px 0px 30px 10px;
 	text-align: left;
+	text-transform: uppercase;
 }
 
 .blog_main h2{
