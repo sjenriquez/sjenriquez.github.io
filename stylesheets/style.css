@@ -4,11 +4,11 @@ body {
 
 .wrapper {
 	width: 100%;
-	background-color: #000;
+	background-color: #fff;
 }
 
 .headerwrap {
-	background-color: #4B5B6E;
+	background-color: #000;
 	position: fixed;
 	width: 100%;
 	top: 0;
