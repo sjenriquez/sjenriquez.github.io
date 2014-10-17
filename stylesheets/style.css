@@ -8,7 +8,7 @@ body {
 }
 
 .headerwrap {
-	background-color: #000;
+	background-color: #444;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -172,7 +172,7 @@ body {
 
 .footerwrap {
 	width: 100%;
-	background-color: #000;
+	background-color: #444;
 	clear: both;
 }
 
