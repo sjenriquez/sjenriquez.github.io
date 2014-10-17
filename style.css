@@ -8,14 +8,17 @@ body {
 }
 
 .headerwrap {
-	margin-top: 15px;
 	background-color: #617F5A;
+	position: fixed;
+	width: 100%;
+	top: 0;
 }
 
 .header {
 	width: 75%;
 	margin-right: auto;
 	margin-left: auto;
+	height: 50px;
 }
 
 .navigation {
@@ -52,7 +55,7 @@ body {
 
 .sprites a {
 	float: right;
-	padding: 5px 5px 0px 5px;
+	padding: 5px 10px 0px 10px;
 }
 
 .sprites img {
@@ -74,7 +77,7 @@ body {
 }
 
 #twitter {
-	padding-top: 5px;
+	padding-top: 9px;
 }
 
 #linkedin {
@@ -99,9 +102,17 @@ body {
 	display: block;
 }
 
+.footerwrap {
+	width: 100%;
+	background-color: #617F5A;
+}
+
 .footer {
 	width: 75%;
 	margin: 20px auto;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: .8em;
+	color: #fff;
 }
 
 .footer_left {
