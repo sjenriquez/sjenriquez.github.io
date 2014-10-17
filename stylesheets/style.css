@@ -4,7 +4,7 @@ body {
 
 .wrapper {
 	width: 100%;
-	background-color: #fff;
+	background-color: #000;
 }
 
 .headerwrap {
@@ -172,7 +172,7 @@ body {
 
 .footerwrap {
 	width: 100%;
-	background-color: #343444;
+	background-color: #000;
 	clear: both;
 }
 
