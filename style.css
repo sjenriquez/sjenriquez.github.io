@@ -60,22 +60,21 @@ body {
 }
 
 #github {
-	background-image: url('https://sjenriquez.github.io/img/GitHub-Mark-Light-32px.png');
+	background-image: url('../img/GitHub-Mark-Light-32px.png');
 	background-repeat: no-repeat;
 	height: 32px;
 	width: 32px;
 }
 
 #github :hover {
-	background-image: url('https://sjenriquez.github.io/img/GitHub-Mark-32px.png');
+	background-image: url('../img/GitHub-Mark-32px.png');
 	background-repeat: no-repeat;
 	height: 32px;
 	width: 32px;
 }
 
 #twitter {
-	height: 32px;
-	width: 32px;
+	padding-top: 2px;
 }
 
 #linkedin {
