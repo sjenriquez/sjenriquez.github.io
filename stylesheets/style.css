@@ -1,10 +1,10 @@
 body {
 	margin: 0 0 0 0;
+	background-color: #d7d5cf;
 }
 
 .wrapper {
 	width: 100%;
-	background-color: #d7d5cf;
 }
 
 .headerwrap {
