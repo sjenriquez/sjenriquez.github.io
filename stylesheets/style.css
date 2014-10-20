@@ -123,6 +123,7 @@ body {
   margin:50px 0px 10px 0px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1em;
+  line-height: 150%;
 }
 
 .blog_main h1 {
@@ -130,6 +131,7 @@ body {
 	margin:10px 0px 30px 10px;
 	text-align: left;
 	text-transform: uppercase;
+	line-height: 1.2em;
 }
 
 .blog_main h2{
@@ -143,7 +145,23 @@ body {
 }
 
 .blog_main p{
-  margin:10px 0px 10px 10px;
+	margin:10px 0px 10px 10px;
+}
+
+.blog_main a:hover {
+	color: #fff;
+}
+
+.blog_main a {
+	color: #444;
+	text-decoration: none;
+}
+
+hr.dashed {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+    margin: 50px 0;
 }
 
 .blog_sidebar{
@@ -168,6 +186,35 @@ body {
 
 .blog_sidebar :hover {
 	color: #ccc
+}
+
+.code {
+	color: green;
+	background-color: white;
+}
+
+p.inline-block {
+	display:inline-block;
+	background-color: yellow;
+	width: 200px;
+}
+
+p.inline {
+	display: inline;
+	background-color: green;
+	margin: 0;
+	padding: 0;
+}
+
+p.block {
+	display: block;
+	background-color: tan;
+	width: 200px;
+}
+
+.img_center {
+	margin: 0 auto;
+	padding: 10px 0;
 }
 
 .footerwrap {

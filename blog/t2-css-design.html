@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../stylesheets/style.css">
+		<title>Scott Enriquez | blog</title>
+	</head>
+
+	<body>
+    	<div class="wrapper">
+	    	<div class="headerwrap">	
+	    		<div class="header">
+	    			<div class="navigation">
+	    				<ul>
+	    					<li><a id="current" href="https://sjenriquez.github.io/">Home</a></li>
+	    					<li><a href="https://sjenriquez.github.io/projects/">Projects</a></li>
+	    					<li><a href="https://sjenriquez.github.io/blog/">Blog</a></li>
+	    					<li><a href="https://sjenriquez.github.io/about.html">About</a></li>
+	    					<li><a href="https://sjenriquez.github.io/contact.html">Contact</a></li>
+	    				</ul>	
+	    			</div>
+	    			<div class="sprites">
+	    				<a href="http://github.com/sjenriquez"><img src="../img/GitHub-Mark-Light-32px.png"></a>
+	    				<a id="twitter" href="https://twitter.com/scottjenriquez"><img src="../img/Twitter_logo_white.png"></a>
+	    				<a href="http://www.linkedin.com/in/senriquez/"><img src="../img/linkedin.png"></a>
+	    			</div>
+				</div>
+			</div>
+	    <div class="content">
+	    	<div class="blog_main">
+	      		<h1>Display: what the heck does this do?</h1>
+	      		<h2>Inline vs Inline-block (vs Block)</h2>
+	      		<h3>10/19/14</h3>
+	      		<p>Getting you content and containers to layout just how you'd like them to isn't always strightforward. Today I'll break down one aspect of laying out your content with the display property.</p>
+
+	      		<p>There are three main display properties to know: <span class="code">inline</span>, <span class="code">inline-block</span>, and <span class="code">block</span>. A <span class="code">block</span>-level element has a definable width and height and are displayed on their own line. Think of <span class="code">block</span> displayed elements like the subway rider who puts their bag in the empty seat next to them, forcing the other riders to look for seats in the next available row. On the contrary, <span class="code">inline</span> is like an ink jet printer; diligently printing out one line at a time happily going with the flow of the document. An element with <span class="code">inline</span>-level display does NOT have a definable height and width and will NOT create new rows in the layout, kinda opposite of block level elements. The happy middle ground is <span class="code">inline-block</span>. The display has defineable width and height but will NOT display on it's own line. This will let you line up your elements nicely next to each other. Check out the examples below:</p>
+
+	      		<p>Here are two paragraphs set to display:<span class="code">block</span>:</p>
+	      		
+	      		<p class="block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet dignissim neque. In auctor est est. Pellentesque a turpis sem. Nulla facilisi. Nullam tincidunt urna mattis, viverra orci sed, vestibulum lorem. Nullam consectetur urna sit amet vestibulum tempor. Nullam in turpis ut orci lobortis porttitor. Fusce mauris leo, tempus eu cursus sed, fringilla sed leo. Aliquam tempus lacus metus, feugiat viverra eros tincidunt at.</p>
+
+	      		<p class="block">Aliquam erat volutpat. Proin volutpat fermentum leo a pretium. Sed tincidunt tellus nibh, a iaculis lacus suscipit sed. Etiam eu tincidunt nisl. Donec imperdiet consequat felis at mattis. Vestibulum interdum diam odio, et interdum tellus fringilla non. Vivamus quis luctus nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit ex a dolor lacinia, a porttitor metus aliquet.</p>
+
+	      		<p>See how these paragraphs create their own line? This is because the are set to display:<span class="code">block</span> (actually the default for paragraphs). Now take a look at these same two paragraphs set to display:<span class="code">inline</span>.</p>
+
+	      		<p class="inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet dignissim neque. In auctor est est. Pellentesque a turpis sem. Nulla facilisi. Nullam tincidunt urna mattis, viverra orci sed, vestibulum lorem. Nullam consectetur urna sit amet vestibulum tempor. Nullam in turpis ut orci lobortis porttitor. Fusce mauris leo, tempus eu cursus sed, fringilla sed leo. Aliquam tempus lacus metus, feugiat viverra eros tincidunt at.</p>
+
+				<p class="inline">Aliquam erat volutpat. Proin volutpat fermentum leo a pretium. Sed tincidunt tellus nibh, a iaculis lacus suscipit sed. Etiam eu tincidunt nisl. Donec imperdiet consequat felis at mattis. Vestibulum interdum diam odio, et interdum tellus fringilla non. Vivamus quis luctus nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit ex a dolor lacinia, a porttitor metus aliquet.</p>
+
+				<p>See how they flow right in to one another? And here's the marriage of the two, <span class="code">inline-block</span>. The snazzy thing about this mariage of display types is you can set height and width and have the two elements (paragraphs in this example) line up right next to eachother.</p>
+
+				<p class="inline-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet dignissim neque. In auctor est est. Pellentesque a turpis sem. Nulla facilisi. Nullam tincidunt urna mattis, viverra orci sed, vestibulum lorem. Nullam consectetur urna sit amet vestibulum tempor. Nullam in turpis ut orci lobortis porttitor. Fusce mauris leo, tempus eu cursus sed, fringilla sed leo. Aliquam tempus lacus metus, feugiat viverra eros tincidunt at.</p>
+
+				<p class="inline-block">Aliquam erat volutpat. Proin volutpat fermentum leo a pretium. Sed tincidunt tellus nibh, a iaculis lacus suscipit sed. Etiam eu tincidunt nisl. Donec imperdiet consequat felis at mattis. Vestibulum interdum diam odio, et interdum tellus fringilla non. Vivamus quis luctus nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc suscipit ex a dolor lacinia, a porttitor metus aliquet.</p>
+
+				<p>Nice right. The only kinda funky thing with <span class="code">inline-block</span> is that the elements line up on the bottom. This is easily resolved by adding <span class="code">vertical-align:top</span>. Have fun!</p>
+
+	    	</div>
+
+			<div class="blog_sidebar">
+			  <ul>
+			    <li><a href="#">Link 1</a></li>
+			    <li><a href="#">Link 2</a></li>
+			    <li><a href="#">Link 3</a></li>
+			    <li><a href="#">Link 4</a></li>
+			  </ul>
+			</div>
+		</div>	    
+    	<div class="footerwrap">
+	    	<div class="footer">
+	    		<div class="footer_left">
+	    			<p></p>
+	    		</div>
+
+	    		<div class="footer_right">
+	    			<p>From pixels to page &copy 2014 Scott Enriquez</p>
+	    		</div>
+	    	</div>
+	    </div>	
+	</body>
+</html>
