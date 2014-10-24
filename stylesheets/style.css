@@ -117,6 +117,35 @@ body {
 	display: block;
 }
 
+.footerwrap {
+	width: 100%;
+	background-color: #444;
+	clear: both;
+}
+
+.footer {
+	width: 75%;
+	margin: 20px auto;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: .8em;
+	color: #fff;
+}
+
+.footer_left {
+	width: 45%;
+	left: 0px;
+	display: inline-block;
+}
+
+.footer_right {
+	width: 54%;
+	right: 0px;
+	display: inline-block;
+	text-align: right;
+}
+
+
+
 .blog_main{
   float:left;
   width:65%;
@@ -189,8 +218,9 @@ hr.dashed {
 }
 
 .code {
-	color: green;
+	color: #000;
 	background-color: white;
+	font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
 
 p.inline-block {
@@ -215,31 +245,4 @@ p.block {
 .img_center {
 	margin: 0 auto;
 	padding: 10px 0;
-}
-
-.footerwrap {
-	width: 100%;
-	background-color: #444;
-	clear: both;
-}
-
-.footer {
-	width: 75%;
-	margin: 20px auto;
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: .8em;
-	color: #fff;
-}
-
-.footer_left {
-	width: 45%;
-	left: 0px;
-	display: inline-block;
-}
-
-.footer_right {
-	width: 54%;
-	right: 0px;
-	display: inline-block;
-	text-align: right;
 }
