@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../stylesheets/style.css">
+		<title>Scott Enriquez | blog</title>
+	</head>
+
+	<body>
+    	<div class="wrapper">
+	    	<div class="headerwrap">	
+	    		<div class="header">
+	    			<div class="navigation">
+	    				<ul>
+	    					<li><a id="current" href="https://sjenriquez.github.io/">Home</a></li>
+	    					<li><a href="https://sjenriquez.github.io/projects/">Projects</a></li>
+	    					<li><a href="https://sjenriquez.github.io/blog/">Blog</a></li>
+	    					<li><a href="https://sjenriquez.github.io/about.html">About</a></li>
+	    					<li><a href="https://sjenriquez.github.io/contact.html">Contact</a></li>
+	    				</ul>	
+	    			</div>
+	    			<div class="sprites">
+	    				<a href="http://github.com/sjenriquez"><img src="../img/GitHub-Mark-Light-32px.png"></a>
+	    				<a id="twitter" href="https://twitter.com/scottjenriquez"><img src="../img/Twitter_logo_white.png"></a>
+	    				<a href="http://www.linkedin.com/in/senriquez/"><img src="../img/linkedin.png"></a>
+	    			</div>
+				</div>
+			</div>
+	    <div class="content">
+	    	<div class="blog_main">
+	    		<h1>Arrays and Hashes in Ruby</h1>
+	      		<h2>Let's make some hash browns</h2>
+	      		<h3>10/23/14</h3>
+
+	      		<img class="img_center" src="../img/hash_browns.jpeg">
+
+	      		<p>Everyone likes hash browns right? I'm sorry if you don't, you're really missing out. Personally I like mine extra crispy from some greasy griddle. In this post I'm going to show you how to organize you favorite hash brown recipes to make at home. And when your home hash won't cut it, we'll keep track of your favorite diners by neighborhood. To do this we will store these lists in <span class="code">array</span>'s and <span class="code">hash</span>es.</p>
+
+	      		<p>We're going organize this information in a way ruby can understand. To put it another way, we're going to organize our DATA (computer speak for information). And to rephrase again, we're going to structure our data (getting closer to true geek talk) - we'll be using DATA STRUCTURES.</p>
+
+	      		<img class="img_center" src="../img/tickler_file.png">
+
+	      		<p>Data structures are ways of storing information that computers can use. An <span class="code">array</span> is kind of like a tickler file with numbers on the tabs. You can put stuff in the file under an index number, and then access that stuff via the index. Computers usually like to use 0 (instead of 1) as the starting point, so the first element in the <span class="code">array</span> has the index 0. We can add anything to an array, strings (geek talk for words), integers (more geek talk), and other types of data. To make our hash life easier, we're going to store the ingredients in an array.</p><br>
+
+	      		<h3>INGREDIENTS</h3>
+	      		<ul>
+	      			<li>3 Tbsp olive oil, canola oil, or grapeseed oil</li>
+					<li>1 lb Russet baking potatoes, peeled and grated></li>
+					<li>Salt and pepper</li>
+				</ul>
+
+				<p>Let's store these three ingredients in an <span class="code">array</span></p>
+
+				<p class="code">simplyrecipes_hash_brown_ingredients = ["3 Tbsp olive oil, canola oil, or grapeseed oil","1 lb Russet baking potatoes, peeled and grated","Salt and pepper"]</p><br>
+
+				<p>This code stores the ingredients I found on simplyrecipes.com in an <span class="code">array</span> called <span class="code">simplyrecipes_hash_brown_ingredients</span>. If we printed this array to the console this is how we'd do it and what it would look like:</p>
+
+				<p class="code">puts simplyrecipes_hash_brown_ingredients<br><br>
+					3 Tbsp olive oil, canola oil, or grapeseed oil<br>
+					1 lb Russet baking potatoes, peeled and grated<br>
+					Salt and pepper</p><br>
+
+				<p>Using a different <span class="code">array</span> for different recipes, we can keep all our ingredients organized. If we wanted to access one of the ingredients, we would do it like this:</p>
+
+				<p class="code">puts simplyrecipes_hash_brown_ingredients[1]<br><br>
+					1 lb Russet baking potatoes, peeled and grated</p><br>
+
+				<p>See how the second ingredient is printed out? Remember that the index for the first element in <span class="code">arrays</span> is 0, not 1. Clearly, this may be overkill for storing hash brown recipes. But, hopefully this helps demonstrate a way of storing data in ruby.</p>
+
+				<p>Let's look at another data structure, <span class="code">hash</span>. It's Sunday morning, you want a some eggs, bacon, and hash browns. You've amassed a large number of favorite diners in your city, but you memory is fading. Let's make life easier and store this list in ruby. To do this, we can use a <span class="code">hash</span>. A <span class="code">hash</span> is kind of like an <span class="code">array</span> but instead of having no control over the index number, <span class="code">hash</span>es let us make our own index. The index doesn't even have to be a number. To better describe the association of data, <span class="code">hash</span>es have a key and a value. We can set both of these elements.</p>
+
+				<p>For our list of favorite diners, we'll organize them by neighborhood. The hash will be setup like this:</p>
+
+				<p class="code"> favorite_diners = {<br>
+					&nbsp&nbsp"neighborhood" (the key) => "restaurant", (the value)<br>
+					&nbsp&nbsp}</p><br>
+
+				<p>Let's go ahead and define the <span class="code">hash</span>:</p>
+
+				<p class="code"> favorite_diners = {<br>
+					&nbsp&nbsp"capitol_hill" => "Ted's Bulletin",<br>
+					&nbsp&nbsp"h_st" => "Tony's Breakfast",<br>
+					&nbsp&nbsp"adams_morgan" => "The Diner"<br>
+					}</p><br>
+
+				<p>This has is setup to use strings for both the key and value, but we could us a bunch of different types of data to store in a <span class="code">hash</span>. For today, we'll just leave it at that. We can then access values in the <span class="code">hash</span> just like we could do with <span class="code">array</span>s.</p>
+
+				<p class="code">puts favorite_diners["adams_morgan"]<br><br>
+					The Diner</p><br>
+
+				<p>So there you have it, using <span class="code">array</span>s and <span class="code">hash</span>es for hash browns.</p>
+
+
+	    	</div>
+		</div>	    
+    	<div class="footerwrap">
+	    	<div class="footer">
+	    		<div class="footer_left">
+	    			<p></p>
+	    		</div>
+
+	    		<div class="footer_right">
+	    			<p>From pixels to page &copy 2014 Scott Enriquez</p>
+	    		</div>
+	    	</div>
+	    </div>	
+	</body>
+</html>
