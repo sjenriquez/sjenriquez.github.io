@@ -64,14 +64,14 @@
 				<p class="code">puts simplyrecipes_hash_brown_ingredients[1]<br><br>
 					1 lb Russet baking potatoes, peeled and grated</p><br>
 
-				<p>See how the second ingredient is printed out? Remember that the index for the first element in <span class="code">arrays</span> is 0, not 1. Clearly, this may be overkill for storing hash brown recipes. But, hopefully this helps demonstrate a way of storing data in ruby.</p>
+				<p>See how the second ingredient is printed out? Remember that the index for the first element in <span class="code">array</span>s is 0, not 1. Clearly, this may be overkill for storing hash brown recipes. But, hopefully this helps demonstrate a way of storing data in ruby.</p>
 
-				<p>Let's look at another data structure, <span class="code">hash</span>. It's Sunday morning, you want a some eggs, bacon, and hash browns. You've amassed a large number of favorite diners in your city, but you memory is fading. Let's make life easier and store this list in ruby. To do this, we can use a <span class="code">hash</span>. A <span class="code">hash</span> is kind of like an <span class="code">array</span> but instead of having no control over the index number, <span class="code">hash</span>es let us make our own index. The index doesn't even have to be a number. To better describe the association of data, <span class="code">hash</span>es have a key and a value. We can set both of these elements.</p>
+				<p>Let's look at another data structure, <span class="code">hash</span>. It's Sunday morning, you want some eggs, bacon, and hash browns. You've amassed a large number of favorite diners in your city, but your memory is fading. Let's make life easier and store this list in ruby. To do this, we can use a <span class="code">hash</span>. A <span class="code">hash</span> is kind of like an <span class="code">array</span> but instead of having no control over the index number, <span class="code">hash</span>es let us make our own index. The index doesn't even have to be a number. To better describe the association of data, <span class="code">hash</span>es have a key and a value. We can set both of these elements.</p>
 
 				<p>For our list of favorite diners, we'll organize them by neighborhood. The hash will be setup like this:</p>
 
 				<p class="code"> favorite_diners = {<br>
-					&nbsp&nbsp"neighborhood" (the key) => "restaurant", (the value)<br>
+					&nbsp&nbsp"neighborhood" => "restaurant"<br>
 					&nbsp&nbsp}</p><br>
 
 				<p>Let's go ahead and define the <span class="code">hash</span>:</p>
@@ -82,7 +82,7 @@
 					&nbsp&nbsp"adams_morgan" => "The Diner"<br>
 					}</p><br>
 
-				<p>This has is setup to use strings for both the key and value, but we could us a bunch of different types of data to store in a <span class="code">hash</span>. For today, we'll just leave it at that. We can then access values in the <span class="code">hash</span> just like we could do with <span class="code">array</span>s.</p>
+				<p>This hash is setup to use strings for both the key and value, but we could use a bunch of different types of data to store in a <span class="code">hash</span>. For today, we'll just leave it at that. We can then access values in the <span class="code">hash</span> just like we could do with <span class="code">array</span>s.</p>
 
 				<p class="code">puts favorite_diners["adams_morgan"]<br><br>
 					The Diner</p><br>
