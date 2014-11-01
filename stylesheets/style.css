@@ -246,3 +246,10 @@ p.block {
 	margin: 0 auto;
 	padding: 10px 0;
 }
+
+.img-center-inline {
+	margin: 0 auto;
+	padding: 15px;
+	display: inline !important;
+	vertical-align: top;
+}
