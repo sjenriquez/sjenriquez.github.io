@@ -27,10 +27,67 @@
 			</div>
 	    <div class="content">
 	    	<div class="blog_main">
-	    		<h1>Title</h1>
-	      		<h2>Sub-title</h2>
-	      		<h3>Date</h3>
-	      		<p>Insert paragraph here</p>
+	    		<h1>Ruby Classes</h1>
+	      		<h2>Let's take the motorcycle out for a ride</h2>
+	      		<h3>11/9/14</h3>
+
+	      		<img class="img_center" src="../img/motorcycle.jpg">
+	      		
+	      		<p>Today we'll construct a ruby class for our motorcycle. You can think of the class as a way of creating our motorcycle and class methods as actions we want our motorcycle to do. Let's get started by setting up our motorcycle class.</p>
+
+	      		<p class="code">
+	      			class Motorcycle<br><br>
+	      				
+	      				def initialize
+	      					@motorcycle = ""
+	      				end
+	      			end	
+				</p><br>
+
+				<p>The code above allows us to create a new class Motorcycle and initializes a new instance variable @motorcycle. Instance variables can be referenced and accessed by class methods. Let's create a few methods for our motorcycle.</p>
+
+				<p class="code">
+					class Motorcycle<br><br>
+	      				
+	      			&nbsp&nbsp def initialize<br>
+	      			&nbsp&nbsp&nbsp&nbsp @motorcycle = ""<br>
+	      			&nbsp&nbsp end<br>
+
+	      			&nbsp&nbsp def brand<br>
+	      			&nbsp&nbsp&nbsp&nbsp puts "Please enter your motorcycle brand:"<br>
+	      			&nbsp&nbsp&nbsp&nbsp @motorcycle = gets.chomp<br>
+	      			&nbsp&nbsp end<br><br>
+
+	      			&nbsp&nbsp def rev<br>
+	      			&nbsp&nbsp&nbsp&nbsp puts "My #{@motorcycle} likes to go, vroom vroooommm..."<br>
+	      			&nbsp&nbsp end<br><br>
+
+	      			&nbsp&nbsp def my_ride<br>
+	      			&nbsp&nbsp&nbsp&nbsp puts "I ride a #{@motorcycle} and it's fast!"<br>
+	      			&nbsp&nbsp end<br>
+	      			end<br><br>
+
+	      			my_bike = Motorcycle.new<br>
+	      			my_bike.brand<br>
+					my_bike.rev<br>
+					my_bike.my_ride<br>
+	      		</p><br>
+	      		
+	      		<p>Now we have a few methods we can call on our new motorcycle. Let's take a look at how that would ride out. The program first asks us what brand of motorcycle we want.</p>
+
+	      		<p class="code">
+	      			$ Please enter your motorcycle brand:<br>
+	      			Moto Guzzi
+	      		</p>
+
+	      		<p>My personal ride is a Moto Guzzi. After I enter my brand a few methods run, here's what we'll see.</p>
+
+	      		<p class="code">
+	      			My Moto Guzzi likes to go, vroom vroooommm...<br>
+	      			I ride a Moto Guzzi and it's fast!
+	      		</p><br>
+
+	      		<p>As you can see, classes contain methods that act upon new instances of our class. May you always code and ride fast!</p>
 	    	</div>
 		</div>	    
     	<div class="footerwrap">
