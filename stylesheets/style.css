@@ -114,6 +114,15 @@ body {
 	line-height: 1.2em;
 }
 
+.content a:hover {
+	color: #fff;
+}
+
+.content a {
+	color: #444;
+	text-decoration: none;
+}
+
 .content img {
 	margin-right: auto;
 	margin-left: auto;
