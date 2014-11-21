@@ -107,8 +107,11 @@ body {
 }
 
 .content h1{
-	font-size: 22px;
-	text-align: center;
+	font-size: 2em;
+	margin:10px 0px 30px 10px;
+	text-align: left;
+	text-transform: uppercase;
+	line-height: 1.2em;
 }
 
 .content img {
