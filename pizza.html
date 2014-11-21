@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Battle of the Best Slice</title>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+<style>
+
+	body {
+		margin: 30px;
+		padding: 0;
+	    font-family: "Josefin Sans", sans-serif;
+	    background-color: white;
+	    color: black;
+	}
+
+	#container {
+		position: relative;
+		width: 800px;
+		height: 450px;
+		margin-left: auto ;
+  		margin-right: auto ;
+  		background-color: white;
+	}
+
+	#board {
+		position: relative;
+		width: 650px;
+	    height: 300px;
+		margin-left: 100px;
+		border: 1px solid black;
+	}
+
+	#playerImage {
+		position: absolute;
+		height: 50px;
+		width: 50px;
+		left: 600px;
+		top: 100px;
+		background-image: url("./img/homer_drool.jpg");
+	}
+
+	#dannyImage {
+		position: absolute;
+		height: 50px;
+		width: 50px;
+		left: 0px;
+		top: 250px;
+	}
+
+	#salImage {
+		position: absolute;
+		height: 50px;
+		width: 50px;
+		left: 0px;
+		top: 0px;
+	}
+
+	#newYork {
+		position: relative;
+		height: 75px;
+		width: 125px;
+		background-image: url("./img/new_york_style.jpg");
+	}
+
+	#deepDish {
+		position: relative;
+		height: 58px;
+		width: 125px;
+		background-image: url("./img/deep_dish.png");
+	}
+
+	#header {
+		position: relative;
+		width: 800px;
+		height: 170px;
+		margin-left: auto ;
+  		margin-right: auto ;
+  		text-align:center;		
+	}
+
+	#header h1 {
+    margin:auto;
+    line-height:51px;
+    vertical-align:middle;
+    text-transform: uppercase;
+	}
+
+	#header p {
+		font-size: 18px;
+		text-transform: uppercase;
+		line-height: 1.5em;
+	}
+</style>
+
+<div id="header">
+	<h1>Battle of the Best Slice</h1>
+	<p>Of the many great debates, nothing is more important than which style of pizza is better: Chicago Deep Dish or New York style?
+	Use the arrow keys guide homer to your favorite pizza joint, Danny's Deep Dish or Sal's Famous!</p>
+</div>
+
+<div id="container">
+	<div id="newYork"></div>
+	<div id="board">
+		<div id="playerImage"></div>
+		<div id="dannyImage"></div>
+		<div id="salImage"></div>
+	</div>
+	<div id="deepDish"></div>
+</div>
+
+<script type="text/javascript">
+	var playerImage = document.getElementById("playerImage");
+	var posLeft = 600;
+	var posTop = 100;
+	var snd = new Audio("./img/doh.mp3");
+
+	function move(e){
+		if(e.keyCode === 37) {
+			if(posLeft > 0) {
+				posLeft -= 50 
+				playerImage.style.left = posLeft + "px";
+			}
+			else {
+				snd.play();
+			}
+		}
+
+		if(e.keyCode === 38) {
+			if(posTop > 0) {
+				posTop -= 50 
+				playerImage.style.top = posTop + "px";
+			}
+			else {
+				snd.play();
+			}
+		}
+		
+		if(e.keyCode === 39) {
+			if(posLeft < 600) {
+				posLeft += 50 
+				playerImage.style.left = posLeft + "px";
+			}
+			else {
+				snd.play();
+			}
+		}
+		
+		if(e.keyCode === 40) {
+			if(posTop < 250) {
+				posTop += 50 
+				playerImage.style.top = posTop + "px";
+			}
+			else {
+				snd.play();
+			}
+		}
+
+	hasPlayerPickedPizza();
+	};
+
+
+
+	function hasPlayerPickedPizza() {
+		if (("250px" === playerImage.style.top) && ("0px" === playerImage.style.left)) {
+			alert("You chose Chicago!");
+		}
+
+		if (("0px" === playerImage.style.top) && ("0px" === playerImage.style.left)) {
+			alert("You chose New York!")
+		}
+
+		// if ((playerImage.style.top > "350px") || (playerImage.style.top < "0px") || 
+		// 	(playerImage.style.left > "650px") || (playerImage.style.left < "0px")) {
+		// 	alert("Clearly you push the boundries and live outside the lines, you chose California!")
+		// }
+	}
+
+	document.onkeydown = move;
+
+
+</script>
+
+
+</body>
+</html>
