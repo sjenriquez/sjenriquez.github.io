@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="../stylesheets/style.css">
+		<title>Scott Enriquez | blog</title>
+	</head>
+
+	<body>
+    	<div class="wrapper">
+	    	<div class="headerwrap">	
+	    		<div class="header">
+	    			<div class="navigation">
+	    				<ul>
+	    					<li><a id="current" href="https://sjenriquez.github.io/">Home</a></li>
+	    					<li><a href="https://sjenriquez.github.io/projects/">Projects</a></li>
+	    					<li><a href="https://sjenriquez.github.io/blog/">Blog</a></li>
+	    					<li><a href="https://sjenriquez.github.io/about.html">About</a></li>
+	    					<li><a href="https://sjenriquez.github.io/contact.html">Contact</a></li>
+	    				</ul>	
+	    			</div>
+	    			<div class="sprites">
+	    				<a href="http://github.com/sjenriquez"><img src="../img/GitHub-Mark-Light-32px.png"></a>
+	    				<a id="twitter" href="https://twitter.com/scottjenriquez"><img src="../img/Twitter_logo_white.png"></a>
+	    				<a href="http://www.linkedin.com/in/senriquez/"><img src="../img/linkedin.png"></a>
+	    			</div>
+				</div>
+			</div>
+	    <div class="content">
+	    	<div class="blog_main">
+	    		<h1>Ruby vs. JavaScript</h1>
+	      		<h2>Hashes and Objects</h2>
+	      		<h3>11/21/14</h3>
+	      		<p>Ruby and JavaScript have some distinct differences. Both are Object Oriented languages and therefor have similarities as well. This blog post will compare and contrast Ruby Hashes, JavaScript Objects, and give a few examples of use.</p><br>
+
+	      		<p>Ruby-doc.org defines as Hash as:</p>
+
+	      		<p>A Hash is a dictionary-like collection of unique keys and their values. Also called associative arrays, they are similar to Arrays, but where an Array uses integers as its index, a Hash allows you to use any object type.</p><br>
+
+	      		<p>Hashes give us one more definable element than an array. We can iterate through them with methods like <span class="code">#each</span> and <span class="code">#map</span> or access single keys and values. Hashes, like everything in Ruby, are objects belonging to the Hash class. They are a very useful data structure, particularly for dictionaries.</p><br>
+
+	      		<p>Here's an example of a <span class="code">#hash</span> in ruby representing a band.</p>
+
+	      		<p class="code">
+	      			1 beatles = {<br>
+	      			2 &nbsp&nbsp"paul" => "bass",<br>
+	      			3 &nbsp&nbsp"john" => "guitar",<br>
+	      			4 &nbsp&nbsp"george" => "guitar",<br>
+	      			5 &nbsp&nbsp"ringo" => "drums",<br>
+	      			6 &nbsp&nbspnum_of_albums: 13,<br>
+	      			7 &nbsp&nbsp"debate about # albums" => true<br>
+	      			8 }
+	      		</p><br>
+
+	      		<p>As you can see, both the keys and values can consist of different objects, including <span class="code">#arrays</span>.</p><br>
+
+	      		<p>JavaScript objects may at first appear to be like a Ruby hash. An object in JavaScript also has multiple values stored in pairs.</p>
+
+	      		<p class="code">
+		      		1 var beatles = {<br>
+		      		2 &nbsp&nbsppaul: "bass",<br>
+		      		3 &nbsp&nbspjohn: "guitar",<br>
+		      		4 &nbsp&nbspgeorge: "guitar",<br>
+		      		5 &nbsp&nbspringo: "drums",<br>
+		      		6 &nbsp&nbspnumOfAlbums: 13,<br>
+		      		7 &nbsp&nbspdebateAboutNumOfAlbums: true<br>
+		      		8 }
+		      	</p><br>
+
+	      		<p>These pairs are referred to as property and value, <span class="code">numOfAlbums: 13</span>. Naming conventions are slightly different in JavaScript as you can see. Unlike Ruby hashes, we can't use any value type as the property. Properties are just properties. Also unlike Ruby, in JavaScript we can make a property's value a method. For example:</p>
+
+	      		<p class="code">
+		      		1 var beatles = {<br>
+		      		2 &nbsp&nbsppaul: "bass",<br>
+		      		3 &nbsp&nbspjohn: "guitar",<br>
+		      		4 &nbsp&nbspgeorge: "guitar",<br>
+		      		5 &nbsp&nbspringo: "drums",<br>
+		      		6 &nbsp&nbspnumOfAlbums: 13,<br>
+		      		7 &nbsp&nbspdebateAboutNumOfAlbums: true<br>
+		      		8 &nbsp&nbspringosInstrument: function() {<br>
+		      		9 &nbsp&nbsp&nbsp&nbspreturn "Ringo plays" + this.ringo;<br>
+		      		10&nbsp&nbsp}<br>
+		      		11 }<br>
+		      		12<br>
+		      		13 console.log(beatles.ringosInstrument())<br><br>
+		      		Ringo plays drums
+	      		</p><br>
+
+	      		<p>Here we see a key difference. We can run various methods on a Ruby <span class="code">#hash</span> but methods are defined inside a <span class="code">Class</span>, not in the <span class="code">#hash</span> object itself. Let's put this hash inside a <span class="code">Class</span> so we can define a method to print what Ringo plays.</p><br>
+
+	      		<p>
+	      		Another difference appears between JavaScript and Ruby when we head down this road. In Ruby there is strict encapsulation of variables. Variables within Classes aren't accessible unless we explicitly define them as so. Furthermore, variables are accessible within a class only when defined as an instance variable. JavaScript variables are globally accessible when we define them as var someVar = something. JavaScript doesn't have strict encapsulation like Ruby. Let's finish out this post showing how to print "Ringo plays drums" in Ruby.</p>
+
+	      		<p class ="code">
+	      			1 class Best_band<br>
+	      			2 <br>
+	      			3 &nbsp&nbspdef initialize<br>
+	      			4 &nbsp&nbsp&nbsp&nbsp@beatles = { &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp # Create instance variable<br> 
+	      			5 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"paul" => "bass",<br>
+					6 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"john" => "guitar",<br>
+					7 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"george" => "guitar",<br>
+					8 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"ringo" => "drums",<br>
+					9 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspnum_of_albums: 13,<br>
+					10&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"debate about albums" => true<br>
+	      			11&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+	      			12&nbsp&nbspend<br>
+	      			13<br>
+	      			14&nbsp&nbspdef ringo_plays<br>
+	      			15&nbsp&nbsp&nbsp&nbspputs "Ringo plays #{@beatles["ringo"]}"<br>
+	      			16&nbsp&nbspend<br>
+	      			17<br>
+	      			18 end<br>
+	      			19<br>
+	      			20 new_object = Best_band.new
+	      			21<br>
+	      			22 new_object.ringo_plays<br><br>
+	      			Ringo plays drums
+	      		</p>
+
+	      		<p>Ruby is very beginner friendly and makes wrapping your head around Object Oriented Programming very easy. If you start with Ruby, JavaScript might be confusing at first. Keep at it!</p>
+
+	    	</div>
+		</div>	    
+    	<div class="footerwrap">
+	    	<div class="footer">
+	    		<div class="footer_left">
+	    			<p></p>
+	    		</div>
+
+	    		<div class="footer_right">
+	    			<p>From pixels to page &copy 2014 Scott Enriquez</p>
+	    		</div>
+	    	</div>
+	    </div>	
+	</body>
+</html>
