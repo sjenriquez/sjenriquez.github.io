@@ -163,7 +163,7 @@ body {
   width:65%;
   margin:50px 0px 10px 0px;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 150%;
 }
 
@@ -195,8 +195,6 @@ body {
 
 .blog_main p{
 	margin:10px 0px 10px 10px;
-	font-size: 1.2em;
-	line-height: 1.7em;
 }
 
 .blog_main a:hover {
