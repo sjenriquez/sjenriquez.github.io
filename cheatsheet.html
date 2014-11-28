@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="./stylesheets/cheat-style.css">
+		<title>Scott Enriquez | Cheatsheet</title>	
+	</head>
+
+	<body>
+	
+		<div id="wrapper">
+	    	<div id="headerwrap">	
+	    		<div id="header">
+	    			<div id="navigation">
+	    				<ul>
+	    					<li><a href="https://sjenriquez.github.io/">Home</a></li>
+	    					<li><a href="./projects/">Projects</a></li>
+	    					<li><a href="./blog/">Blog</a></li>
+	    					<li><a href="./about.html">About</a></li>
+	    					<li><a href="./contact.html">Contact</a></li>
+	    					<li><a id="current"href="./cheatsheet.html"></a></li>
+	    				</ul>	
+	    			</div>
+	    			<div id="sprites">
+	    				<a href="http://github.com/sjenriquez"><img src="./img/GitHub-Mark-Light-32px.png"></a>
+	    				<a id="twitter" href="https://twitter.com/scottjenriquez"><img src="./img/Twitter_logo_white.png"></a>
+	    				<a href="http://www.linkedin.com/in/senriquez/"><img src="./img/linkedin.png"></a>
+	    			</div>
+				</div>
+			</div>
+			<div id ="menu">
+				<p>JavaScript Cheatsheet</p>
+				<ul>
+					<li><a href="#for">The For Loop</a></li>
+					<li><a href="#object">Objects</a></li>
+					<li><a href="#for_in">The For/In Loop</a></li>
+					<li><a href="#while">The While Loop</a></li>
+				</ul>
+			</div>
+			<div id="cheat_content">
+				<div class="cheat">
+					<a id="for" class="top"></a>
+					<h3>The For Loop</h3>
+					<div class="code"><pre>
+var text = "";
+for (var i = 0; i < 5; i++) {
+  text += "The number is " + i + "&lt;br&gt;";
+}</pre></div>
+				</div>
+				<div class="cheat">
+					<a id="object" class="top"></a>
+					<h3>Objects</h3>
+					<div class="code"><pre>
+var person = {
+    firstName : "John",
+    lastName  : "Doe",
+    age       : 50,
+    eyeColor  : "blue"
+};</pre></div>
+					<p>When accessing object properties, use dot notation to access explicit object properties. Use bracket notation if using variables for properties.</p>
+					<div class="code"><pre>
+person.firstName;
+"John"
+
+dog["firstName"];
+"John"
+
+var x = "age";
+person.x;
+undefined
+
+person[x];
+50</pre></div>
+				</div>
+				<div class="cheat">
+					<a id="for_in" class="top"></a>
+					<h3>The For/In Loop</h3>
+			 		<div class="code"><pre>
+var txt = "";
+var person = {fname:"John", lname:"Doe", age:25}; 
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+John Doe 25</pre></div>
+				</div>
+				<div class="cheat">
+					<a id="while" class="top"></a>
+			  		<h3>The While Loop</h3>
+			  		<div class="code"><pre>
+var text = "";
+var i = 0;
+while (i < 10) {
+    text += "&lt;br&gt;The number is " + i;
+    i++;
+}</pre></div>
+				</div>
+			</div>
+		</div>
+    	<div class="footerwrap">
+	    	<div class="footer">
+	    		<div class="footer_left">
+	    			<p></p>
+	    		</div>
+
+	    		<div class="footer_right">
+	    			<p>From pixels to page &copy 2014 Scott Enriquez</p>
+	    		</div>
+	    	</div>
+	    </div>
+	</body>
+</html>
