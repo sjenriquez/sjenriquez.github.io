@@ -108,7 +108,7 @@ body {
 }
 
 #current {
-	color: #fff;
+	color: #fff !important;
 }
 
 #navigation a:active {
