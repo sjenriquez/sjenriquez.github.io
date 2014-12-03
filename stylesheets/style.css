@@ -129,6 +129,12 @@ body {
 	display: block;
 }
 
+#pizza {
+	display: inline !important;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
 .footerwrap {
 	width: 100%;
 	background-color: #444;
