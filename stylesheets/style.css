@@ -99,6 +99,12 @@ body {
 
 }
 
+#email {
+	float: left;
+	margin-left: 120px;
+	margin-bottom: 400px;
+}
+
 .content {
 	width: 75%;
 	margin: 60px auto;
